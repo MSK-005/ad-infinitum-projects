@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Lato', serif;
+}
+
+p {
+    font-size: 18px;
+}
+
+h1 {
+    font-size: 35px;
+}
+
+h3 {
+    font-size: 28px;
+}
+
+.nav-container {
+    width: 100%;
+}
+
+.nav-ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-ul > li {
+    list-style-type: none;
+    margin: 10px 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav-links {
+    font-weight: 400;
+    font-size: 20px;
+    background-image: linear-gradient(
+      to right,
+      #54b3d6,
+      #54b3d6 50%,
+      #000 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+  
+.nav-links:before{
+    content: '';
+    background: #54b3d6;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+}
+  
+.nav-links:hover {
+   background-position: 0;
+}
+  
+.nav-links:hover::before{
+    width: 100%;
+}
+
+.carousel {
+    position: relative;
+    height: 400px;
+    width: 60%;
+    margin: 0 auto 40px auto;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-track-container {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-track {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    height: 100%;
+    transition: transform 250ms ease-in;
+}
+
+.carousel-slide {
+    display: flex;
+    background: rgba(139, 100, 36, 0.26);
+
+
+    /* Old code */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.carousel-slide > * {
+    margin: auto 10px;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+.carousel-button-left {
+    left: -40px;
+}
+
+.carousel-button-right {
+    right: -40px;
+}
+
+.carousel-button img {
+    width: 12px;
+}
+
+.carousel-nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.carousel-indicator {
+    border: 0;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    margin: 0 12px;
+    cursor: pointer;
+}
+
+.carousel-indicator.current-slide {
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.is-hidden {
+    display: none;
+}
+
+.centered {
+    text-align: center;
+}
+
+.news {
+    width: 80%;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 auto;
+    padding: 15px;
+    background-color: rgb(221, 208, 200);
+}
+
+.news-item {
+    min-width: 275px;
+    max-width: 25%; 
+    padding: 10px; 
+    margin: 0 auto; 
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;   
+    border-radius: 5px;
+}
+
+.news-item:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+.news-image-container {
+    margin: 0 auto;
+}
+
+.news-image {
+    width: 250px;
+    height: 250px;
+}
+
+.main-link {
+    margin: 10px auto 10px 0;
+    background-color: rgb(50, 50, 50);
+    border-radius: 2px;
+    padding: 5px;
+    text-align: center;
+    transition: 0.3s;
+    text-decoration: none;
+    color: white;
+}
+
+.recent-developments {
+    width: 100%;
+    background: rgb(175, 214, 248);
+    padding: 20px;
+    margin: 40px 0;
+}
+
+.development {
+    width: 80%;
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    height: 300px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.dev-image {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    
+}
